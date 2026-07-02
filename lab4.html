@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio — Zharylkasyn</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<header class="site-header">
+    <a href="#hero" class="logo">Zharylkasyn</a>
+
+    <nav class="site-nav" aria-label="Main navigation">
+        <ul class="nav-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section id="hero" class="hero">
+        <div class="hero__content">
+            <p class="hero__label">Web Technologies Student</p>
+            <h1 class="hero__title">Hello, I am Zharylkasyn</h1>
+            <p class="hero__text">
+                I am learning HTML, CSS, responsive layouts, and modern web development.
+                This portfolio page is built with mobile-first HTML and CSS.
+            </p>
+
+            <a class="hero__button" href="#projects">View my projects</a>
+        </div>
+
+        <div class="hero__image-wrapper">
+            <img
+                    class="hero__photo"
+                    src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg"
+                    alt="HTML5 logo">
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="section-heading">
+            <p class="section-label">My Work</p>
+            <h2>Projects</h2>
+            <p>These cards use CSS Grid and change from 1 column to 2 and then 3 columns.</p>
+        </div>
+
+        <div class="projects__grid">
+            <article class="project-card">
+                <img src="https://placehold.co/800x500/2563eb/ffffff?text=HTML+Page" alt="Preview of HTML page project">
+                <div class="project-card__body">
+                    <h3>HTML Profile Page</h3>
+                    <p>A semantic HTML5 page with header, navigation, sections, images, and table.</p>
+                    <span>HTML</span>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <img src="https://placehold.co/800x500/7c3aed/ffffff?text=CSS+Design" alt="Preview of CSS design project">
+                <div class="project-card__body">
+                    <h3>CSS Styled Portfolio</h3>
+                    <p>A portfolio page styled with colors, spacing, typography, and card components.</p>
+                    <span>CSS</span>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <img src="https://placehold.co/800x500/0f766e/ffffff?text=Flexbox" alt="Preview of Flexbox layout project">
+                <div class="project-card__body">
+                    <h3>Flexbox Navbar</h3>
+                    <p>A responsive navigation bar created with Flexbox alignment and gap.</p>
+                    <span>Flexbox</span>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <img src="https://placehold.co/800x500/d97706/ffffff?text=Table" alt="Preview of programming languages table">
+                <div class="project-card__body">
+                    <h3>Programming Table</h3>
+                    <p>An accessible table with caption, table head, table body, and scoped headers.</p>
+                    <span>HTML Table</span>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <img src="https://placehold.co/800x500/be123c/ffffff?text=Responsive" alt="Preview of responsive layout project">
+                <div class="project-card__body">
+                    <h3>Responsive Layout</h3>
+                    <p>A mobile-first layout that works on phone, tablet, and desktop screens.</p>
+                    <span>Responsive</span>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <img src="https://placehold.co/800x500/111827/ffffff?text=CSS+Grid" alt="Preview of CSS Grid project">
+                <div class="project-card__body">
+                    <h3>CSS Grid Cards</h3>
+                    <p>A project card grid that becomes three columns on large desktop screens.</p>
+                    <span>CSS Grid</span>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <div class="section-heading">
+            <p class="section-label">What I Know</p>
+            <h2>Skills</h2>
+        </div>
+
+        <div class="skills__grid">
+            <div class="skill-item">
+                <span class="skill-icon">🌐</span>
+                <span>HTML5</span>
+            </div>
+
+            <div class="skill-item">
+                <span class="skill-icon">🎨</span>
+                <span>CSS3</span>
+            </div>
+
+            <div class="skill-item">
+                <span class="skill-icon">📱</span>
+                <span>Responsive Design</span>
+            </div>
+
+            <div class="skill-item">
+                <span class="skill-icon">📦</span>
+                <span>Box Model</span>
+            </div>
+
+            <div class="skill-item">
+                <span class="skill-icon">↔️</span>
+                <span>Flexbox</span>
+            </div>
+
+            <div class="skill-item">
+                <span class="skill-icon">▦</span>
+                <span>CSS Grid</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="section-heading">
+            <p class="section-label">Contact Me</p>
+            <h2>Contact</h2>
+            <p>Send me a message using this simple contact form.</p>
+        </div>
+
+        <form class="contact-form" action="#" method="post">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="your@email.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+            </div>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <p>&copy; 2026 Zharylkasyn. All rights reserved.</p>
+</footer>
+</body>
+</html>

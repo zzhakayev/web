@@ -1,0 +1,126 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #1f2937;
+    background-color: #f3f4f6;
+}
+
+header {
+    background-color: #2563eb;
+    color: white;
+    padding: 1.5rem 2rem;
+}
+
+header h1 {
+    margin: 0 0 1rem;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+section {
+    background-color: white;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
+}
+
+h2 {
+    color: #2563eb;
+    margin-top: 0;
+}
+
+h3 {
+    color: #7c3aed;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+ul {
+    padding-left: 1.25rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+caption {
+    font-weight: bold;
+    margin-bottom: 0.75rem;
+}
+
+th,
+td {
+    border: 1px solid #d1d5db;
+    padding: 0.75rem;
+    text-align: left;
+}
+
+thead {
+    background-color: #2563eb;
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9fafb;
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #111827;
+    color: white;
+}
+
+.card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.card {
+    flex: 1 1 280px;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    background-color: #f9fafb;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
+}
+
+.card h3 {
+    margin-top: 0;
+}

@@ -1,0 +1,119 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f8fafc;
+}
+
+.hero-section {
+    background: linear-gradient(135deg, #ede9fe, #ffffff);
+}
+
+.hero-image-box {
+    max-width: 18rem;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    background-color: #ffffff;
+    box-shadow: 0 1rem 2rem rgb(0 0 0 / 12%);
+}
+
+.hero-image {
+    max-height: 14rem;
+    object-fit: contain;
+}
+
+.project-img {
+    height: 11.25rem;
+    object-fit: cover;
+}
+
+.card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-0.25rem);
+    box-shadow: 0 1rem 2rem rgb(0 0 0 / 15%) !important;
+}
+
+.skill-icon {
+    font-size: 2rem;
+}
+
+.navbar-brand,
+.nav-link,
+.btn,
+.badge {
+    letter-spacing: 0.01em;
+}
+
+.error-message {
+    display: block;
+    margin-top: 0.35rem;
+    color: #dc3545;
+    font-size: 0.875rem;
+}
+
+.form-control[aria-invalid="true"] {
+    border-color: #dc3545;
+}
+
+.form-control[aria-invalid="true"]:focus {
+    border-color: #dc3545;
+    box-shadow: 0 0 0 0.25rem rgb(220 53 69 / 25%);
+}
+
+.form-control[aria-invalid="false"]:valid {
+    border-color: #198754;
+}
+
+#char-counter {
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+.dark-mode {
+    background-color: #111827;
+    color: #f8fafc;
+}
+
+.dark-mode .hero-section {
+    background: linear-gradient(135deg, #111827, #312e81);
+}
+
+.dark-mode .card,
+.dark-mode form,
+.dark-mode .skill-item,
+.dark-mode .hero-image-box {
+    background-color: #1f2937 !important;
+    color: #f8fafc;
+}
+
+.dark-mode .text-muted {
+    color: #cbd5e1 !important;
+}
+
+.dark-mode .bg-light {
+    background-color: #111827 !important;
+}
+
+.dark-mode #add-project-form {
+    background-color: #1f2937 !important;
+    color: #f8fafc;
+}
+
+.dark-mode .form-text {
+    color: #cbd5e1;
+}
+
+.dark-mode .form-control,
+.dark-mode .form-select {
+    background-color: #111827;
+    color: #f8fafc;
+    border-color: #374151;
+}
+
+.dark-mode .form-control::placeholder {
+    color: #9ca3af;
+}

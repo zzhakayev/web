@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "HTML Profile Page",
+    "description": "A semantic HTML5 page with header, navigation, sections, images, and table.",
+    "category": "html"
+  },
+  {
+    "id": 2,
+    "title": "CSS Styled Portfolio",
+    "description": "A portfolio page styled with colors, spacing, typography, and card components.",
+    "category": "css"
+  },
+  {
+    "id": 3,
+    "title": "Bootstrap Portfolio",
+    "description": "A portfolio page using Bootstrap grid, cards, navbar, and forms.",
+    "category": "bootstrap"
+  }
+]

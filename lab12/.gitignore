@@ -1,0 +1,4 @@
+projects.db
+__pycache__/
+venv/
+.venv/

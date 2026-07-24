@@ -1,0 +1,14 @@
+[
+  {
+    "title": "University System",
+    "description": "A university management system similar to Platonus.",
+    "language": "Vue.js",
+    "url": "https://github.com/zzhakayev"
+  },
+  {
+    "title": "Digital Library",
+    "description": "A digital library website for finding and reading books.",
+    "language": "JavaScript",
+    "url": "https://github.com/zzhakayev"
+  }
+]

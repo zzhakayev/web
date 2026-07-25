@@ -1,131 +1,574 @@
 <!DOCTYPE html>
 <html lang="en">
-
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="styles.css">
-    <title>My Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Zharylkassyn Zhakayev | Frontend Developer</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f7fb;
+            color: #172033;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        header {
+            background: #0f172a;
+            color: white;
+            padding: 18px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 25px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            color: white;
+            font-size: 21px;
+            font-weight: 700;
+        }
+
+        nav {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: #dbeafe;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            color: white;
+        }
+
+        .hero {
+            min-height: 86vh;
+            padding: 90px 7%;
+            background: linear-gradient(135deg, #0f172a, #1d4ed8);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 60px;
+        }
+
+        .hero-content {
+            max-width: 690px;
+        }
+
+        .eyebrow {
+            color: #bfdbfe;
+            font-size: 17px;
+            font-weight: 700;
+            margin-bottom: 14px;
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 7vw, 76px);
+            line-height: 1.05;
+            margin-bottom: 22px;
+        }
+
+        .hero-description {
+            font-size: 21px;
+            color: #dbeafe;
+            max-width: 650px;
+            margin-bottom: 34px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 13px 24px;
+            border-radius: 9px;
+            font-weight: 700;
+            transition: 0.2s;
+        }
+
+        .button-primary {
+            background: white;
+            color: #1d4ed8;
+        }
+
+        .button-secondary {
+            border: 2px solid white;
+            color: white;
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
+        }
+
+        .portrait {
+            width: 290px;
+            height: 360px;
+            border-radius: 28px;
+            overflow: hidden;
+            background: #dbeafe;
+            border: 6px solid rgba(255, 255, 255, 0.25);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+            flex-shrink: 0;
+        }
+
+        .portrait img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .photo-fallback {
+            display: none;
+            width: 100%;
+            height: 100%;
+            place-items: center;
+            font-size: 70px;
+            font-weight: 800;
+            color: #1d4ed8;
+        }
+
+        section {
+            padding: 85px 7%;
+        }
+
+        .section-container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .section-label {
+            color: #2563eb;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        h2 {
+            font-size: clamp(34px, 5vw, 48px);
+            margin-bottom: 28px;
+            color: #0f172a;
+        }
+
+        .about-text {
+            max-width: 850px;
+            font-size: 18px;
+        }
+
+        .about-text p {
+            margin-bottom: 18px;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 38px;
+        }
+
+        .stat {
+            background: white;
+            padding: 28px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+        }
+
+        .stat strong {
+            display: block;
+            color: #2563eb;
+            font-size: 38px;
+        }
+
+        #skills {
+            background: white;
+        }
+
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 13px;
+        }
+
+        .skill {
+            background: #eff6ff;
+            color: #1e40af;
+            border: 1px solid #bfdbfe;
+            padding: 11px 18px;
+            border-radius: 999px;
+            font-weight: 700;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .project {
+            background: white;
+            padding: 30px;
+            border-radius: 18px;
+            box-shadow: 0 12px 35px rgba(15, 23, 42, 0.09);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-number {
+            color: #2563eb;
+            font-size: 14px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            margin-bottom: 14px;
+        }
+
+        .project h3 {
+            color: #0f172a;
+            font-size: 25px;
+            margin-bottom: 13px;
+        }
+
+        .project p {
+            margin-bottom: 15px;
+        }
+
+        .project-result {
+            background: #eff6ff;
+            border-left: 4px solid #2563eb;
+            padding: 13px;
+            margin-bottom: 20px;
+        }
+
+        .project-link {
+            color: #1d4ed8;
+            font-weight: 700;
+            margin-top: auto;
+        }
+
+        #contact {
+            background: #0f172a;
+            color: white;
+        }
+
+        #contact h2 {
+            color: white;
+        }
+
+        #contact .section-label {
+            color: #93c5fd;
+        }
+
+        .contact-description {
+            max-width: 650px;
+            color: #cbd5e1;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .contact-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .contact-links a {
+            background: white;
+            color: #0f172a;
+            padding: 12px 20px;
+            border-radius: 9px;
+            font-weight: 700;
+        }
+
+        footer {
+            background: #020617;
+            color: #94a3b8;
+            text-align: center;
+            padding: 22px;
+        }
+
+        @media (max-width: 800px) {
+            header {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            nav {
+                gap: 15px;
+            }
+
+            .hero {
+                min-height: auto;
+                padding-top: 70px;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-description {
+                font-size: 18px;
+            }
+
+            .buttons {
+                justify-content: center;
+            }
+
+            .portrait {
+                width: 230px;
+                height: 290px;
+            }
+
+            .stats,
+            .projects {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 65px 6%;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
 <header>
-    <h1>My Portfolio</h1>
+    <a class="logo" href="#home">Zharylkassyn Zhakayev</a>
 
     <nav>
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
+        <a href="#work">Work</a>
         <a href="#contact">Contact</a>
-        <a href="https://developer.mozilla.org" target="_blank" rel="noopener">MDN</a>
     </nav>
 </header>
 
 <main>
-    <section id="about">
-        <h2>About Me</h2>
-        <h3>Student of Web Technologies</h3>
-        <p>Hello! My name is Zharylkasyn. I am learning HTML5 and web technologies.</p>
 
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg"
-             alt="HTML5 logo"
-             width="150">
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <p class="eyebrow">Digital Engineering Student · Almaty, Kazakhstan</p>
+
+            <h1>Junior Frontend Developer</h1>
+
+            <p class="hero-description">
+                I build clear and user-friendly web interfaces using HTML,
+                CSS and JavaScript.
+            </p>
+
+            <div class="buttons">
+                <a class="button button-primary" href="#work">View My Work</a>
+                <a class="button button-secondary" href="#contact">Contact Me</a>
+            </div>
+        </div>
+
+        <div class="portrait">
+            <img
+                src="profile.jpg"
+                alt="Professional portrait of Zharylkassyn Zhakayev"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';"
+            >
+            <div class="photo-fallback">ZZ</div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="section-container">
+            <p class="section-label">About</p>
+            <h2>About Me</h2>
+
+            <div class="about-text">
+                <p>
+                    I am a third-year Digital Engineering student at Narxoz
+                    University and an aspiring frontend developer based in Almaty.
+                </p>
+
+                <p>
+                    I create responsive and user-friendly interfaces using HTML,
+                    CSS and JavaScript. During my frontend practice at Otbasy Bank,
+                    I gained experience working in a professional environment and
+                    improving digital interfaces.
+                </p>
+
+                <p>
+                    I am currently looking for an internship or junior frontend
+                    developer opportunity where I can strengthen my technical
+                    skills and contribute to real projects.
+                </p>
+            </div>
+
+            <div class="stats">
+                <div class="stat">
+                    <strong>3</strong>
+                    Pages developed for a university management system
+                </div>
+
+                <div class="stat">
+                    <strong>4</strong>
+                    Vehicle interfaces localized into Russian
+                </div>
+
+                <div class="stat">
+                    <strong>2</strong>
+                    Coursera Research Methods certificates completed
+                </div>
+            </div>
+        </div>
     </section>
 
     <section id="skills">
-        <h2>Skills</h2>
+        <div class="section-container">
+            <p class="section-label">Technical Skills</p>
+            <h2>Skills</h2>
 
-        <div class="card-grid">
-            <article class="card">
-                <h3>HTML Basics</h3>
-                <p>I can create a basic HTML page with semantic structure.</p>
-            </article>
-
-            <article class="card">
-                <h3>Links</h3>
-                <p>I can create internal and external links using the anchor tag.</p>
-            </article>
-
-            <article class="card">
-                <h3>Tables</h3>
-                <p>I can create accessible tables with captions and header cells.</p>
-            </article>
+            <div class="skill-list">
+                <span class="skill">HTML</span>
+                <span class="skill">CSS</span>
+                <span class="skill">JavaScript</span>
+                <span class="skill">Responsive Web Design</span>
+                <span class="skill">Frontend Development</span>
+                <span class="skill">User Interface Design</span>
+                <span class="skill">Git</span>
+                <span class="skill">GitHub</span>
+                <span class="skill">Web Development</span>
+                <span class="skill">Localization</span>
+            </div>
         </div>
-
-        <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/HD_transparent_picture.png"
-             alt=""
-             width="600"
-             height="40">
     </section>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <p>This portfolio page is my first HTML5 project.</p>
-    </section>
+    <section id="work">
+        <div class="section-container">
+            <p class="section-label">Selected Work</p>
+            <h2>Projects and Achievements</h2>
 
-    <section id="languages">
-        <h2>Programming Languages Table</h2>
+            <div class="projects">
 
-        <table>
-            <caption>Five Programming Languages</caption>
+                <article class="project">
+                    <p class="project-number">PROJECT 01</p>
 
-            <thead>
-            <tr>
-                <th scope="col">Name</th>
-                <th scope="col">Year</th>
-                <th scope="col">Paradigm</th>
-                <th scope="col">Creator</th>
-            </tr>
-            </thead>
+                    <h3>University Management System</h3>
 
-            <tbody>
-            <tr>
-                <th scope="row">JavaScript</th>
-                <td>1995</td>
-                <td>Multi-paradigm</td>
-                <td>Brendan Eich</td>
-            </tr>
+                    <p>
+                        I independently designed and developed a web interface
+                        inspired by university management platforms. The system
+                        contains sections for students, teachers and subjects.
+                    </p>
 
-            <tr>
-                <th scope="row">Python</th>
-                <td>1991</td>
-                <td>Object-oriented, procedural</td>
-                <td>Guido van Rossum</td>
-            </tr>
+                    <p>
+                        <strong>My contribution:</strong> interface structure,
+                        visual design, responsive layout and frontend development
+                        using HTML, CSS and JavaScript.
+                    </p>
 
-            <tr>
-                <th scope="row">Java</th>
-                <td>1995</td>
-                <td>Object-oriented</td>
-                <td>James Gosling</td>
-            </tr>
+                    <p class="project-result">
+                        <strong>Result:</strong> completed a functional
+                        3-page university management system.
+                    </p>
 
-            <tr>
-                <th scope="row">C++</th>
-                <td>1985</td>
-                <td>Object-oriented, procedural</td>
-                <td>Bjarne Stroustrup</td>
-            </tr>
+                    <a
+                        class="project-link"
+                        href="https://github.com/zzhakayev"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        View on GitHub →
+                    </a>
+                </article>
 
-            <tr>
-                <th scope="row">PHP</th>
-                <td>1995</td>
-                <td>Server-side scripting</td>
-                <td>Rasmus Lerdorf</td>
-            </tr>
-            </tbody>
-        </table>
+                <article class="project">
+                    <p class="project-number">ACHIEVEMENT 02</p>
+
+                    <h3>Chinese Vehicle Interface Localization</h3>
+
+                    <p>
+                        I worked on adapting digital vehicle interfaces for
+                        Russian-speaking users by translating and reviewing
+                        interface terminology.
+                    </p>
+
+                    <p>
+                        <strong>My contribution:</strong> Russian localization,
+                        terminology review and improvement of text clarity across
+                        vehicle interface screens.
+                    </p>
+
+                    <p class="project-result">
+                        <strong>Result:</strong> localized interfaces for
+                        4 Chinese vehicle models.
+                    </p>
+
+                    <a
+                        class="project-link"
+                        href="https://www.linkedin.com/in/zhakayev"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        View LinkedIn Profile →
+                    </a>
+                </article>
+
+            </div>
+        </div>
     </section>
 
     <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: zharylkassyn.zhakayev@narxoz.kz</p>
+        <div class="section-container">
+            <p class="section-label">Contact</p>
+            <h2>Let’s Connect</h2>
+
+            <p class="contact-description">
+                I am open to internship and junior frontend developer
+                opportunities. You can contact me through email, LinkedIn or GitHub.
+            </p>
+
+            <div class="contact-links">
+                <a href="mailto:zharylkassyn.zhakayev@narxoz.kz">Email</a>
+
+                <a
+                    href="https://www.linkedin.com/in/zhakayev"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    LinkedIn
+                </a>
+
+                <a
+                    href="https://github.com/zzhakayev"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    GitHub
+                </a>
+            </div>
+        </div>
     </section>
+
 </main>
 
 <footer>
-    <p>&copy; 2026 My Portfolio</p>
+    <p>© 2026 Zharylkassyn Zhakayev. Built with HTML and CSS.</p>
 </footer>
 
 </body>
